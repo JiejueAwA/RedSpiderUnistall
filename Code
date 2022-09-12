@@ -1,0 +1,13 @@
+*结束进程
+set taskkill /im=tk
+%tk% rscheck.exe /f
+%tk% redagent.exe /f
+%tk% checkrs.exe /f
+%tk% epointer.exe /f
+*删除主要文件
+set De9xe=del
+set redspider=C:\Program Files\3000soft\Red Spider\
+%De9xe% /f /s /q %redspider%rsscheck.exe
+%De9xe% /f /s /q %redspider%redagent.exe
+%De9xe% /f /s /q %redspider%checkrs.exe
+%De9xe% /f /s /q %redspider%epointer.exe
