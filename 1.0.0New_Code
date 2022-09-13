@@ -1,0 +1,45 @@
+@echo off
+%1mshta vbscript:CreateObject("Shell.Application").ShellExecute("cmd.exe","/c %~s0 ::","","runas",1)(window.close)&&exit
+@echo off
+title Jiejue Unistall Tools
+echo  +-RedSpiderUnistall Tools-+
+echo 丨   版本=1.0Releases      丨
+echo  +-------------------------+
+set /p "title=红蜘蛛的安装位置》》"
+set /p "title=警告！！,请输入真实位置！》》"
+set taskkill /im=tk
+set copy=cp
+set del /f /s=dl
+set title=tl
+%tl% 正在结束-rsscheck.exe
+%tk%rsscheck.exe
+%tl% 正在删除-rsscheck.exe
+%dl% %title%rsscheck.exe
+%tl% 正在结束-redagent.exe
+%tk% redagent.exe
+%tl% 正在删除-redagent.exe
+%dl% %title%redagent.exe
+%tl% 正在结束-checkrs.exe
+%tk% checkrs.exe
+%tl% 正在删除-checkrs.exe
+%dl% %title%checkrs.exe
+%tl% 正在结束-epointer.exe
+%tl%epointer.exe
+%tl% 正在删除-epointer.exe
+%dl% %title%epointer.exe
+:menu
+echo 是否删除剩余文件？
+set /p "etnt=请输入(Y/N)="
+if "%etnt%"=="Y" cls & goto yes
+if "%etnt%"=="N" cls & goto no
+cls % echo 非法内容，请重试。 & goto menu
+:yes
+title=状态:run -UNISTALL.eu
+echo 开始删除！
+cd  %title%
+del /f /s %title%*.*
+goto :eof
+:no
+set /p "no=按下回车退出"
+exit
+goto :eof
